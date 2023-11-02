@@ -27,7 +27,7 @@
 # participant.getevents()
 
 StandAlone = ['Go-Kart', 'Robo War', 'RC Nitro', 'MUN'] 
-GroupEvents = ['Goggle Hunters', 'Creo 3D', 'Dark Room']
+GroupEvents = ['GE1', 'GE2', 'GE3', 'GE4', 'GE5', 'GE6', 'GE7', 'GE8', 'GE9','GE10']
 class Events:
     def __init__(self):
        print("Greetings Buddy, We are organising both Stand-Alone and Group events\n")
@@ -42,4 +42,5 @@ class Events:
             print (i)
 participant = Events()
 participant.getevents()
+
 
