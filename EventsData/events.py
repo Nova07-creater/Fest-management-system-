@@ -1,46 +1,50 @@
-#  So we do have 2 kinds of events 
+#  So we do have 2 kinds of events
 
 #  1) Stand Alone events including: "Gokarting", "Robo War" & "RC Nitro"
 #  2) Group Events
 
+import pandas as pd
+df = pd.read_csv(r'/home/narayanj/Practice/THAR/EventsData/events.csv')
+GroupEvents = df['EVENT NAME'].tolist()
+StandAlone = ['Go-Kart', 'Robo War', 'RC Nitro', 'MUN']
 
 
-# class Events: 
-
-#     def __init__(self):
-#         print("Greetings Buddy, The events are as follows: ")
-#     StandAlone = ['Go-Kart', 'Robo War', 'RC Nitro', 'MUN']
-#     GroupEvents = ['Goggle Hunters', 'Creo 3D', 'Dark Room']
-
-#     def getevents(self):
-#         global StandAlone, GroupEvents
-        
-#         print("Our Stand Alone Events: \n")
-#         for i in StandAlone:
-#             print(i)
-#         print("Our Group Events: \n")
-#         for i in GroupEvents:
-#             print(i)
-
-# participant = Events()
-
-# participant.getevents()
-
-StandAlone = ['Go-Kart', 'Robo War', 'RC Nitro', 'MUN'] 
-GroupEvents = ['GE1', 'GE2', 'GE3', 'GE4', 'GE5', 'GE6', 'GE7', 'GE8', 'GE9','GE10']
 class Events:
     def __init__(self):
-       print("Greetings Buddy, We are organising both Stand-Alone and Group events\n")
+        print("Greetings Buddy, We are organising both Stand-Alone and Group events\n")
 
-    def getevents(self):  
+    def getevents(self):
         print('Our Stand Alone events are: \n')
         for i in StandAlone:
-            print (i)
+            print(i)
         print('\n')
         print('Our Group events are: \n')
         for i in GroupEvents:
-            print (i)
+            print(i, sep='\n')
+
+
+NumGroup = int(input("Number of events (Group Events)you are interested in? "))
+Groupevelist = []
+for i in range(0, NumGroup):
+    event = input("Which event you want to participate? ")
+    Groupevelist.append(event)
+print('\n')
+print(f'So you have registered in {NumGroup} events and these are: \n')
+count = 1
+for i in Groupevelist:
+    print(count, i)
+    count += 1
+StandEvelist =[]
+NumStand = int(input('Number of Stand Alone events you are interested in?'))
+
+for i in range(0, NumStand):
+    event = input('Which event you want to  participate? ')
+    StandEvelist.append(event)
+print('\n')
+print(f'So you have registered in {NumStand} events and these are: \n')
+Count = 1
+for i in StandEvelist:
+    print(count, i)
+    Count += 1
 participant = Events()
 participant.getevents()
-
-
