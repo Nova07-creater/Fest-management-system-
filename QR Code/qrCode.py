@@ -36,8 +36,8 @@ class studentsData:
         self.dataList9 = self.df["CONTACT NO."].tolist()
 
     def genQRcode(self):
-        data_list = list(zip(self.dataList2, self.dataList3, 
-                             self.dataList4, self.dataList5, 
+        data_list = list(zip(self.dataList2, self.dataList3, self.dataList4, self.dataList5,
+            
                              self.dataList6, self.dataList7, 
                              self.dataList8, self.dataList9))
                              
