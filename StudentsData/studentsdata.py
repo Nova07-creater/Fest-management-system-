@@ -1,6 +1,11 @@
-import pandas as pd
+# import pandas as pd
 
-data = pd.read_csv('/home/narayanj/Practice/THAR/StudentsData/DATA1.csv')
+# data = pd.read_csv('/home/narayanj/Practice/THAR/StudentsData/DATA1.csv')
+
+# print(data)
 
 
-print(data)
+class participantsData:
+    def __init__(self) -> None:
+        pass
+    
